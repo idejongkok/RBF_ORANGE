@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230604 11:15:43.819" rpa="false" schemaversion="3">
+<suite id="s1" name="Login" source="E:\KO_RBF\Automation_Web\test\login.robot">
+<test id="s1-t1" name="As a user I should be able to login with correct username and password" line="5">
+<kw name="Given I am on login page" library="login_steps">
+<kw name="go to login page" library="login_pom">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230604 11:15:44.130" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230604 11:15:44.130" endtime="20230604 11:16:02.365"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230604 11:16:02.365" endtime="20230604 11:16:02.367"/>
+</kw>
+<status status="PASS" starttime="20230604 11:15:44.129" endtime="20230604 11:16:02.367"/>
+</kw>
+<kw name="check text Login title" library="login_pom">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${loginText}</arg>
+<arg>Login</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230604 11:16:04.247" level="INFO">Element '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/h5' contains text 'Login'.</msg>
+<status status="PASS" starttime="20230604 11:16:02.367" endtime="20230604 11:16:04.247"/>
+</kw>
+<status status="PASS" starttime="20230604 11:16:02.367" endtime="20230604 11:16:04.247"/>
+</kw>
+<kw name="check username textbox" library="login_pom">
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${usernameTextBox}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230604 11:16:04.248" endtime="20230604 11:16:04.288"/>
+</kw>
+<status status="PASS" starttime="20230604 11:16:04.247" endtime="20230604 11:16:04.288"/>
+</kw>
+<kw name="check password textbox" library="login_pom">
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${passwordTextBox}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230604 11:16:04.288" endtime="20230604 11:16:04.323"/>
+</kw>
+<status status="PASS" starttime="20230604 11:16:04.288" endtime="20230604 11:16:04.323"/>
+</kw>
+<kw name="check login button" library="login_pom">
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230604 11:16:04.324" endtime="20230604 11:16:04.357"/>
+</kw>
+<status status="PASS" starttime="20230604 11:16:04.323" endtime="20230604 11:16:04.357"/>
+</kw>
+<kw name="check forgot password link" library="login_pom">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${forgotLink}</arg>
+<arg>Forgot your password?</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230604 11:16:04.384" level="INFO">Element '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[4]/p' contains text 'Forgot your password?'.</msg>
+<status status="PASS" starttime="20230604 11:16:04.357" endtime="20230604 11:16:04.384"/>
+</kw>
+<status status="PASS" starttime="20230604 11:16:04.357" endtime="20230604 11:16:04.384"/>
+</kw>
+<status status="PASS" starttime="20230604 11:15:44.129" endtime="20230604 11:16:04.384"/>
+</kw>
+<status status="PASS" starttime="20230604 11:15:44.128" endtime="20230604 11:16:04.384"/>
+</test>
+<status status="PASS" starttime="20230604 11:15:43.822" endtime="20230604 11:16:04.385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
